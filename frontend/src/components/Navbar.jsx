@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <div className="n-wrapper">
       <div className="n-left">
-        <div className="n-name">Nicolas AUVRAY</div>
+        <div className="n-name">NICO</div>
         <span>toggle</span>
       </div>
       <div className="n-right">
@@ -17,13 +17,15 @@ export default function Navbar() {
             <li>Témoignages</li>
           </ul>
         </div>
-        <a href="mettre à jour plus tard">
-          <span />
-          <span />
-          <span />
-          <span />
-          Contact
-        </a>
+        <div>
+          <a href="mettre à jour plus tard">
+            <span />
+            <span />
+            <span />
+            <span />
+            Contact
+          </a>
+        </div>
       </div>
     </div>
   );
