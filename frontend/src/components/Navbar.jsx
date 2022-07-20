@@ -18,7 +18,7 @@ export default function Navbar() {
           </ul>
         </div>
         <div>
-          <a href="mettre à jour plus tard">
+          <a className="button" href="mettre à jour plus tard">
             <span />
             <span />
             <span />

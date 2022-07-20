@@ -23,20 +23,19 @@
 }
 
 .i-name > :nth-child(2) {
-  color: var(--greenText);
+  color: var(--orange);
   font-weight: bold;
   font-size: 3rem;
 }
 
 .i-name > :nth-child(3) {
-  color: var(white);
+  color: var(--purple);
   font-weight: 100;
   font-size: 1rem;
   margin-top: 1rem;
 }
 
 .i-icons {
-  margin-top: 3rem;
   display: flex;
   gap: 0rem;
 }
@@ -56,33 +55,10 @@
   z-index: 1;
 }
 .i-right > :nth-child(1) {
-  transform: scale(0.69);
-  left: -15%;
-  top: -9%;
+  left: 25%;
+  top: -5%;
 }
 .i-right > :nth-child(2) {
-  top: -4.6rem;
-  transform: scale(0.67);
-  left: -3rem;
-}
-.i-right > :nth-child(3) {
-  transform: scale(1.4);
-  left: 28%;
-}
-.i-right > :nth-child(4) {
-  top: -10%;
-  left: -5%;
-}
-
-.blur {
-  position: absolute;
-  width: 22rem;
-  height: 14rem;
-  border-radius: 50%;
-  background: #edd0ff;
-  filter: blur(212px);
-  z-index: -9;
-  top: -18%;
-  left: 56%;
-  filter: blur(72px);
+  top: -5%;
+  left: 5%;
 }
