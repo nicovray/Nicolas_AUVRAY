@@ -36,5 +36,5 @@
 
 .n-list > ul > li:hover {
   cursor: pointer;
-  color: var(--bluButton);
+  color: var(--greenText);
 }
