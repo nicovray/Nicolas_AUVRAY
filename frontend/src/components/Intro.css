@@ -23,13 +23,13 @@
 }
 
 .i-name > :nth-child(2) {
-  color: var(--bluButton);
+  color: var(--greenText);
   font-weight: bold;
   font-size: 3rem;
 }
 
 .i-name > :nth-child(3) {
-  color: var(--purple);
+  color: var(white);
   font-weight: 100;
   font-size: 1rem;
   margin-top: 1rem;
