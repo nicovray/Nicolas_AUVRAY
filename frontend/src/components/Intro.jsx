@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import FloatingDiv from "./FloatingDiv";
 import "./Intro.css";
 import boy from "../assets/boy.png";
@@ -8,6 +9,8 @@ import Desktop from "../assets/Desktop.png";
 import Button from "./Button";
 
 export default function Intro() {
+  const transition = { duration: 2, type: "spring" };
+
   return (
     <div className="intro">
       <div className="i-left">
@@ -22,13 +25,27 @@ export default function Intro() {
       </div>
       <div className="i-right">
         <img src={boy} alt="" />
-        <img src={Dev} alt="" />
-        <div style={{ top: "25%", left: "70%" }}>
+        <motion.img
+          initial={{ left: "-25%" }}
+          whileInView={{ left: "-5%" }}
+          transition={transition}
+          src={Dev}
+          alt="dev"
+        />
+        <motion.div
+          initial={{ top: "5%", left: "60%" }}
+          whileInView={{ left: "50%" }}
+          transition={transition}
+        >
           <FloatingDiv image={Desktop} />
-        </div>
-        <div style={{ top: "60%", left: "15%" }}>
+        </motion.div>
+        <motion.div
+          initial={{ left: "4rem", top: "25rem" }}
+          whileInView={{ left: "14rem" }}
+          transition={transition}
+        >
           <FloatingDiv image={Mobil} />
-        </div>
+        </motion.div>
       </div>
     </div>
   );
