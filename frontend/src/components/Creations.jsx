@@ -22,7 +22,7 @@ export default function Creations() {
           Télécharger mon CV
         </a>
       </div>
-      <div className="cards" style={{ left: "20rem" }}>
+      <div className="cards" style={{ left: "15rem" }}>
         <ProjetList />
       </div>
     </div>
