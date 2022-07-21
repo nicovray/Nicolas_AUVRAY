@@ -5,6 +5,7 @@ import boy from "../assets/boy.png";
 import Dev from "../assets/Dev.png";
 import Mobil from "../assets/Mobil.png";
 import Desktop from "../assets/Desktop.png";
+import Button from "./Button";
 
 export default function Intro() {
   return (
@@ -16,13 +17,7 @@ export default function Intro() {
           <span>Je suis développeur web...</span>
         </div>
         <div>
-          <a className="button" href="#Contact">
-            <span />
-            <span />
-            <span />
-            <span />
-            Contact
-          </a>
+          <Button />
         </div>
       </div>
       <div className="i-right">
@@ -31,7 +26,7 @@ export default function Intro() {
         <div style={{ top: "25%", left: "70%" }}>
           <FloatingDiv image={Desktop} />
         </div>
-        <div style={{ top: "50%", left: "15%" }}>
+        <div style={{ top: "60%", left: "15%" }}>
           <FloatingDiv image={Mobil} />
         </div>
       </div>

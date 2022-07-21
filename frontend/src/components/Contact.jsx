@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Contact.css";
 
 export default function Contact() {
+  const [message, setMessage] = useState(false);
+
   return (
     <div className="contact-form" id="Contact">
       <div className="c-left">
@@ -27,14 +29,23 @@ export default function Contact() {
           />
           <textarea name="message" className="user" placeholder="Message" />
 
-          <a className="button" href="." type="submit" value="send">
+          <a
+            className="submit-btn"
+            href="#Contact"
+            type="button"
+            onClick={() => setMessage(!message)}
+          >
             <span />
             <span />
             <span />
             <span />
             Envoyer
           </a>
-          {/* <span>{done && "Thanks for Contacting me"}</span> */}
+          {message && (
+            <p className="message">
+              Merci pour votre message. Je vous réponds ASAP !
+            </p>
+          )}
         </form>
       </div>
     </div>

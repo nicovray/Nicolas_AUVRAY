@@ -1,5 +1,6 @@
 import React from "react";
 import "./Stack.css";
+import CV from "../assets/CV.pdf";
 import react from "../assets/react.png";
 import node from "../assets/node.png";
 import mysql from "../assets/mysql.png";
@@ -12,16 +13,16 @@ export default function Stack() {
       <div className="s-left">
         <div className="s-title">
           <span>Stack Technique</span>
-          <span>Languages & Programmes</span>
+          <span>Langages & Programmes</span>
           <span>
             Lorem ispum is simpley dummy text of printing of printing Lorem
           </span>
-          <a className="button" href="#Contact">
+          <a className="dwl-btn" href={CV} download>
             <span />
             <span />
             <span />
             <span />
-            Contact
+            Télécharger mon CV
           </a>
         </div>
       </div>

@@ -2,7 +2,8 @@
   height: 10vh;
   display: flex;
   justify-content: space-between;
-}
+  
+ }
 
 .n-left {
   flex: 1;
@@ -12,8 +13,9 @@
 }
 
 .n-name {
-  font-size: 1.3 rem;
+  font-size: 2rem;
   font-weight: bold;
+  font-family:
 }
 
 .n-right {
@@ -29,12 +31,16 @@
 
 .n-list > ul {
   display: flex;
-  gap: 2rem;
+  gap: 5rem;
   margin-right: 4rem;
   list-style: none;
 }
 
-.n-list > ul > li:hover {
+li {
+  font-size: 1.5rem;
+}
+
+a:hover {
   cursor: pointer;
   color: var(--orange);
 }
