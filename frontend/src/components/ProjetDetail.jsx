@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import "./Card.css";
+import "./ProjetDetail.css";
 
-export default function Card() {
+export default function ProjetDetail() {
   const { id } = useParams();
   const [projet, setProjet] = useState([]);
 

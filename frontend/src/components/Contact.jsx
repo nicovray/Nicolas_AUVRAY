@@ -3,7 +3,7 @@ import "./Contact.css";
 
 export default function Contact() {
   return (
-    <div className="contact-form" id="contact">
+    <div className="contact-form" id="Contact">
       <div className="c-left">
         <div className="c-title">
           <span>Un projet ?</span>
@@ -27,12 +27,7 @@ export default function Contact() {
           />
           <textarea name="message" className="user" placeholder="Message" />
 
-          <a
-            className="button"
-            href="à compléter plus tard"
-            type="submit"
-            value="send"
-          >
+          <a className="button" href="." type="submit" value="send">
             <span />
             <span />
             <span />

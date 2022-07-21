@@ -1,22 +1,22 @@
 import "./App.css";
-import Navbar from "./components/Navbar";
-import Intro from "./components/Intro";
-import Creations from "./components/Creations";
-import Stack from "./components/Stack";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import ProjetList from "./components/ProjetList";
+import ProjetDetail from "./components/ProjetDetail";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Intro />
-      <Creations />
-      <Stack />
-      <Contact />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/admin" element={<ProjetList />} />
+        <Route path="/projet/:id" element={<ProjetDetail />} />
+        {/* <Route path="/admin/" element={<LayoutAdmin />}> */}
+        {/* <Route index element={<ContentHome />} /> */}
+        {/* <Route path="/admin/login" element={<Login />} /> */}
+        {/* <Route path="/admin/accueil" element={<ContentHome />} /> */}
+        {/* </Route> */}
+      </Routes>
     </div>
   );
 }
-
-export default App;

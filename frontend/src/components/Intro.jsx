@@ -16,7 +16,7 @@ export default function Intro() {
           <span>Je suis développeur web...</span>
         </div>
         <div>
-          <a className="button" href="mettre à jour plus tard">
+          <a className="button" href="#Contact">
             <span />
             <span />
             <span />
@@ -28,10 +28,10 @@ export default function Intro() {
       <div className="i-right">
         <img src={boy} alt="" />
         <img src={Dev} alt="" />
-        <div style={{ left: "60%" }}>
+        <div style={{ top: "25%", left: "70%" }}>
           <FloatingDiv image={Desktop} />
         </div>
-        <div style={{ top: "30%", left: "15%" }}>
+        <div style={{ top: "50%", left: "15%" }}>
           <FloatingDiv image={Mobil} />
         </div>
       </div>
