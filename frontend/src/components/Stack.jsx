@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import "./Stack.css";
 import CV from "../assets/CV.pdf";
 import react from "../assets/react.png";
@@ -27,7 +28,13 @@ export default function Stack() {
         </div>
       </div>
       <div className="s-right">
-        <div className="w-mainCircle">
+        <motion.div
+          initial={{ rotate: 45 }}
+          whileInView={{ rotate: 0 }}
+          viewport={{ margin: "-40px" }}
+          transition={{ duration: 3.5, type: "spring" }}
+          className="w-mainCircle"
+        >
           <div className="w-secCircle">
             <img src={react} alt="" />
           </div>
@@ -43,7 +50,7 @@ export default function Stack() {
           <div className="w-secCircle">
             <img src={mysql} alt="" />
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
