@@ -8,7 +8,7 @@ import opensrc from "../assets/opensrc.png";
 
 export default function Stack() {
   return (
-    <div className="stack" id="stack">
+    <div className="stack" id="Stack">
       <div className="s-left">
         <div className="s-title">
           <span>Stack Technique</span>
@@ -16,7 +16,7 @@ export default function Stack() {
           <span>
             Lorem ispum is simpley dummy text of printing of printing Lorem
           </span>
-          <a className="button" href="mettre à jour plus tard">
+          <a className="button" href="#Contact">
             <span />
             <span />
             <span />

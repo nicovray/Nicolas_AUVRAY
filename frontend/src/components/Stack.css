@@ -83,3 +83,22 @@
 .w-secCircle > img {
   transform: scale(0.6);
 }
+
+@media screen and (max-width: 480px) {
+  .stack {
+    flex-direction: column;
+    height: 55rem;
+    padding: 0;
+    gap: 5rem;
+  }
+
+  .s-right {
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    transform: scale(0.7);
+  }
+  .w-mainCircle {
+    position: static;
+  }
+}
