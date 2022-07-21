@@ -12,7 +12,7 @@ export default function Creations() {
     <div className="creations" id="Créations">
       <div className="c-title">
         <span>Mes projets récents</span>
-        <span>Portfolio</span>
+        <span>Applications web et web mobile</span>
         <span>Lorem ipsum is simpley dummy text of printing...</span>
         <a className="button" href={CV} download>
           <span />
@@ -22,25 +22,8 @@ export default function Creations() {
           Télécharger mon CV
         </a>
       </div>
-      <div className="cards">
-        <div style={{ left: "60rem" }}>
-          <ProjetList />
-        </div>
-        {/* <div style={{ top: "5rem", left: "20rem" }}>
-          <Card
-            emoji={css}
-            heading="Developer"
-            detail="Html, Css, JavaScript, React, Nodejs, Express"
-          />
-        </div>
-        <div style={{ top: "10rem", left: "40rem" }}>
-          <Card
-            emoji={js}
-            heading="UI/UX"
-            detail="Lorem ispum dummy text are usually use in section where we need some random text"
-            color="rgba(252, 166, 31, 0.45)"
-          />
-        </div> */}
+      <div className="cards" style={{ left: "15rem" }}>
+        <ProjetList />
       </div>
     </div>
   );

@@ -1,26 +1,11 @@
-#wj-shopping-list {
-  width: 100%;
-}
-
-#wj-shopping-list h1 {
-  margin-top: 20px;
-  text-align: center;
-  font-size: 2rem;
-}
-
-.wj-projet-list {
-  list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.parent {
+display: grid;
+grid-template-columns: repeat(3, 15rem);
+grid-template-rows: repeat(3, 25rem);
+grid-column-gap: 5px;
+grid-row-gap: 5px;
 }
 
 .filter {
   padding: 0 100px;
-}
-
-.projetadd_input.select {
-  width: 100%;
-  margin-top: 40px;
-  margin-bottom: 16px;
 }
