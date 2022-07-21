@@ -14,7 +14,6 @@ export default function Navbar() {
             <li>Accueil</li>
             <li>Créations</li>
             <li>Stack</li>
-            <li>Témoignages</li>
           </ul>
         </div>
         <div>
