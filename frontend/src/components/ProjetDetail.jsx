@@ -23,7 +23,8 @@ export default function ProjetDetail() {
         <h1>{projet.name}</h1>
 
         <div className="data">
-          <div className="category">Category : {projet.category}</div>
+          <div className="category">Description : {projet.detail}</div>
+          <div className="category">Categorie : {projet.category}</div>
         </div>
       </div>
     </div>

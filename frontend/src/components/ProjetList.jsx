@@ -25,7 +25,7 @@ export default function ProjetList() {
           {projet.map((e) => {
             return (
               <li>
-                <Link key={e.id} to={`/plants/${e.id}`}>
+                <Link key={e.id} to={`/admin/projet/${e.id}`}>
                   <ProjetItem projet={e} />
                 </Link>
               </li>
