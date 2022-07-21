@@ -1,6 +1,6 @@
 .wj-projet-item-cover {
-  height: 250px;
-  width: 250px;
+  height: 200px;
+  width: 200px;
   border-radius: 20px;
   object-fit: cover;
 }
@@ -12,11 +12,11 @@
   justify-content: center;
   flex-direction: column;
   position: relative;
+  color: var(--purple);
 }
 
 .legende {
   display: flex;
-  width: 100%;
   align-items: flex-start;
   justify-content: space-between;
   margin-top: 5px;

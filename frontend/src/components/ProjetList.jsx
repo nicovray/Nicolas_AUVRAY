@@ -6,6 +6,7 @@ import ProjetItem from "./ProjetItem";
 
 export default function ProjetList() {
   const [projet, setProjet] = useState([]);
+  const [category, setCategory] = useState([]);
 
   useEffect(() => {
     axios
@@ -14,24 +15,31 @@ export default function ProjetList() {
       .catch((error) => {
         console.error(error);
       });
+
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/categories`)
+      .then((res) => res.json())
+      .then((data) => setCategory(data));
   }, []);
 
   return (
     <div id="wj-shopping-list">
-      <h1>Mes Applications web et web mobile</h1>
+      <div className="filter">
+        <select className="plantadd_input select" name="category" id="category">
+          <option value="0">Tous les types de projets</option>
+          {category.map((e) => (
+            <option key={e.id}>{e.name}</option>
+          ))}
+        </select>
+      </div>
 
-      <div className="wj-projet-list">
-        <ul>
-          {projet.map((e) => {
-            return (
-              <li>
-                <Link key={e.id} to={`/admin/projet/${e.id}`}>
-                  <ProjetItem projet={e} />
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+      <div className="parent">
+        {projet.map((e) => {
+          return (
+            <Link key={e.id} to={`/admin/projet/${e.id}`}>
+              <ProjetItem projet={e} />
+            </Link>
+          );
+        })}
       </div>
     </div>
   );
