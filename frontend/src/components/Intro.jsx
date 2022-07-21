@@ -1,9 +1,6 @@
 import React from "react";
 import FloatingDiv from "./FloatingDiv";
 import "./Intro.css";
-import Github from "../assets/Github.png";
-import Linkedin from "../assets/Linkedin.png";
-import Twitter from "../assets/Twitter.png";
 import boy from "../assets/boy.png";
 import Dev from "../assets/Dev.png";
 import Mobil from "../assets/Mobil.png";
@@ -26,11 +23,6 @@ export default function Intro() {
             <span />
             Contact
           </a>
-        </div>
-        <div className="i-icons">
-          <img src={Github} alt="" />
-          <img src={Linkedin} alt="" />
-          <img src={Twitter} alt="" />
         </div>
       </div>
       <div className="i-right">
