@@ -1,8 +1,8 @@
 const models = require("../models");
 
-class ItemController {
+class CategoryController {
   static browse = (req, res) => {
-    models.item
+    models.category
       .findAll()
       .then(([rows]) => {
         res.send(rows);
@@ -14,7 +14,7 @@ class ItemController {
   };
 
   static read = (req, res) => {
-    models.item
+    models.category
       .find(req.params.id)
       .then(([rows]) => {
         if (rows[0] == null) {
@@ -30,14 +30,14 @@ class ItemController {
   };
 
   static edit = (req, res) => {
-    const item = req.body;
+    const category = req.body;
 
     // TODO validations (length, format...)
 
-    item.id = parseInt(req.params.id, 10);
+    category.id = parseInt(req.params.id, 10);
 
-    models.item
-      .update(item)
+    models.category
+      .update(category)
       .then(([result]) => {
         if (result.affectedRows === 0) {
           res.sendStatus(404);
@@ -52,14 +52,14 @@ class ItemController {
   };
 
   static add = (req, res) => {
-    const item = req.body;
+    const category = req.body;
 
     // TODO validations (length, format...)
 
-    models.item
-      .insert(item)
+    models.category
+      .insert(category)
       .then(([result]) => {
-        res.status(201).send({ ...item, id: result.insertId });
+        res.status(201).send({ ...category, id: result.insertId });
       })
       .catch((err) => {
         console.error(err);
@@ -68,7 +68,7 @@ class ItemController {
   };
 
   static delete = (req, res) => {
-    models.item
+    models.category
       .delete(req.params.id)
       .then(() => {
         res.sendStatus(204);
@@ -80,4 +80,4 @@ class ItemController {
   };
 }
 
-module.exports = ItemController;
+module.exports = CategoryController;
