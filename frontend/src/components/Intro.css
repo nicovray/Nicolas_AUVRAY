@@ -55,8 +55,9 @@
   z-index: 1;
 }
 .i-right > :nth-child(1) {
-  left: 25%;
-  top: 15%;
+  left: 15%;
+  top: 5%;
+  border-radius: 10px;
 }
 .i-right > :nth-child(2) {
   top: 15%;

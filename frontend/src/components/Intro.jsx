@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import FloatingDiv from "./FloatingDiv";
 import "./Intro.css";
-import boy from "../assets/boy.png";
+import boy from "../assets/boy.jpg";
 import Dev from "../assets/Dev.png";
 import Mobil from "../assets/Mobil.png";
 import Desktop from "../assets/Desktop.png";
