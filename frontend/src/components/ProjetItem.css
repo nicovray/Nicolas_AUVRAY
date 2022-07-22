@@ -1,0 +1,23 @@
+.wj-projet-item-cover {
+  height: 200px;
+  width: 200px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.wj-projet-item {
+  margin: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  color: var(--purple);
+}
+
+.legende {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 5px;
+}

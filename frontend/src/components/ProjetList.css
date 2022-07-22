@@ -1,0 +1,11 @@
+.parent {
+display: grid;
+grid-template-columns: repeat(3, 15rem);
+grid-template-rows: repeat(3, 25rem);
+grid-column-gap: 5px;
+grid-row-gap: 5px;
+}
+
+.filter {
+  padding: 0 100px;
+}
