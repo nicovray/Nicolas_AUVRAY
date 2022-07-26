@@ -1,19 +1,18 @@
 import "./ProjetList.css";
-import axios from "axios";
-import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import ProjetItem from "./ProjetItem";
 
 export default function ProjetList() {
   const [projet, setProjet] = useState([]);
+  const [filteredProjet, setFilteredProjet] = useState([]);
   const [category, setCategory] = useState([]);
 
   useEffect(() => {
-    axios
-      .get(`${import.meta.env.VITE_BACKEND_URL}/projet`)
-      .then((res) => setProjet(res.data))
-      .catch((error) => {
-        console.error(error);
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/projet`)
+      .then((res) => res.json())
+      .then((data) => {
+        setProjet(data);
+        setFilteredProjet(data);
       });
 
     fetch(`${import.meta.env.VITE_BACKEND_URL}/categories`)
@@ -21,24 +20,39 @@ export default function ProjetList() {
       .then((data) => setCategory(data));
   }, []);
 
+  const handleFilter = (e) => {
+    const filter = e.target.value;
+
+    if (filter === 0) {
+      setFilteredProjet(projet);
+    } else {
+      setFilteredProjet(
+        projet.filter((project) => project.category_id === filter)
+      );
+    }
+  };
+
   return (
-    <div id="wj-shopping-list">
+    <div>
       <div className="filter">
-        <select className="plantadd_input select" name="category" id="category">
+        <select
+          className="plantadd_input select"
+          name="category"
+          id="category"
+          onChange={handleFilter}
+        >
           <option value="0">Tous les types de projets</option>
-          {category.map((e) => (
-            <option key={e.id}>{e.name}</option>
+          {category.map((categorie) => (
+            <option value={categorie.id} key={categorie.id}>
+              {categorie.name}
+            </option>
           ))}
         </select>
       </div>
 
-      <div className="parent">
-        {projet.map((e) => {
-          return (
-            <Link key={e.id} to={`/admin/projet/${e.id}`}>
-              <ProjetItem projet={e} />
-            </Link>
-          );
+      <div className="card-list">
+        {filteredProjet.map((project) => {
+          return <ProjetItem projet={project} />;
         })}
       </div>
     </div>

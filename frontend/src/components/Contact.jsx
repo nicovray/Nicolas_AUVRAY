@@ -31,8 +31,8 @@ export default function Contact() {
 
           <a
             className="submit-btn"
-            href="#Contact"
-            type="button"
+            href="."
+            type="submit"
             onClick={() => setMessage(!message)}
           >
             <span />
