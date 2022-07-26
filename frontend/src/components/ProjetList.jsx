@@ -26,9 +26,7 @@ export default function ProjetList() {
     if (filter === 0) {
       setFilteredProjet(projet);
     } else {
-      setFilteredProjet(
-        projet.filter((project) => project.category_id === filter)
-      );
+      setFilteredProjet(projet.filter((p) => p.category_id === filter));
     }
   };
 
@@ -42,17 +40,17 @@ export default function ProjetList() {
           onChange={handleFilter}
         >
           <option value="0">Tous les types de projets</option>
-          {category.map((categorie) => (
-            <option value={categorie.id} key={categorie.id}>
-              {categorie.name}
+          {category.map((c) => (
+            <option value={c.id} key={c.id}>
+              {c.name}
             </option>
           ))}
         </select>
       </div>
 
       <div className="card-list">
-        {filteredProjet.map((project) => {
-          return <ProjetItem projet={project} />;
+        {filteredProjet.map((p) => {
+          return <ProjetItem projet={p} />;
         })}
       </div>
     </div>
