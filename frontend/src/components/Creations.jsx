@@ -12,7 +12,7 @@ export default function Creations() {
         <span>Lorem ipsum is simpley dummy text of printing...</span>
         <Button />
       </div>
-      <div className="cards" style={{ left: "25rem" }}>
+      <div className="cards" style={{ left: "10rem" }}>
         <ProjetList />
       </div>
     </div>

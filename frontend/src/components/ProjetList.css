@@ -1,11 +1,16 @@
-.parent {
-display: grid;
-grid-template-columns: repeat(3, 15rem);
-grid-template-rows: repeat(3, 25rem);
-grid-column-gap: 5px;
-grid-row-gap: 5px;
+.card-list {
+  width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  
 }
 
-.filter {
-  padding: 0 100px;
-}
+/* a {
+  outline: none;
+  text-decoration: none;
+  color: black;
+  margin: 0;
+  padding: 0;
+} */
+
